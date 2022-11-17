@@ -1,0 +1,36 @@
+nav {
+  background-color: var(--primary-color);
+}
+
+a {
+  padding: 0 5px;
+  color: var(--tertiary-color);
+  &:hover {
+    border-bottom: 1px solid;
+    color: var(--tertiary-color);
+    transition: 0.3s
+  }
+}
+
+.logo {
+  max-width: 220px;
+  cursor: pointer
+}
+.logo img {
+  max-width:100%;
+}
+
+@media (max-width:768px) {
+  .container-fluid {
+    justify-content: center;
+  }
+
+
+  a {
+    font-size: 1em;
+  }
+  .logo {
+    text-align: center;
+    margin: auto
+  }
+}

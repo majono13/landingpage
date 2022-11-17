@@ -1,0 +1,51 @@
+#content {
+  background: url('../../assets/img/background-services.svg');
+  background-color: var(--primary-color);
+}
+
+.main {
+  padding:10px;
+}
+
+section img {
+  max-width:80%;
+  border-radius: 10px;
+}
+
+h3 {
+  margin: 20px
+}
+
+h1 {
+  margin: 40px auto 20px auto;
+}
+
+p {
+  text-align:justify;
+}
+
+.info {
+  padding: 10px;
+  background-color: var(--primary-color);
+}
+
+.conatiner-services {
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+button {
+  background-color: var(--contrast-color);
+  margin-bottom:15px;
+  &:hover {
+    background-color: var(--contrast-color);
+    opacity: 0.9;
+  }
+}
+
+@media (min-width:768px) {
+
+  .conatiner-services {
+    display: flex;
+  }
+}

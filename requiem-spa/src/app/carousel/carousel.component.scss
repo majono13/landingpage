@@ -1,0 +1,23 @@
+img {
+  width: 100%;
+  opacity: 0.9;
+}
+.carousel-caption  {
+  background-color: var(--tertiary-color);
+  opacity: 0.9;
+  border-radius: 20px;
+  p {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .slider {
+    max-height: 90vh;
+  }
+
+  .carousel-caption p {
+    display: block;
+  }
+}
+
