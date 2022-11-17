@@ -5,14 +5,6 @@
   background-color: var(--secondary-color);
 }
 
-button {
-  background-color: var(--contrast-color);
-  &:hover {
-    background-color: var(--contrast-color);
-    opacity: 0.9;
-  }
-}
-
 .logo {
   display: none;
 }

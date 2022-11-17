@@ -2,16 +2,6 @@ nav {
   background-color: var(--primary-color);
 }
 
-a {
-  padding: 0 5px;
-  color: var(--tertiary-color);
-  &:hover {
-    border-bottom: 1px solid;
-    color: var(--tertiary-color);
-    transition: 0.3s
-  }
-}
-
 .logo {
   max-width: 220px;
   cursor: pointer

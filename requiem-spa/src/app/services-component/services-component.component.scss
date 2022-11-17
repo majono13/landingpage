@@ -34,15 +34,6 @@ p {
   padding-top: 15px;
 }
 
-button {
-  background-color: var(--contrast-color);
-  margin-bottom:15px;
-  &:hover {
-    background-color: var(--contrast-color);
-    opacity: 0.9;
-  }
-}
-
 @media (min-width:768px) {
 
   .conatiner-services {

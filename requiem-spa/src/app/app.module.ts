@@ -14,10 +14,13 @@ import { MenuComponent } from './menu/menu.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { InfoComponent } from './info/info.component';
 import { ServicesComponentComponent } from './services-component/services-component.component';
+import { RegisterComponent } from './register/register.component';
+import { FooterComponent } from './footer/footer.component';
+import { ButtonTopComponent } from './button-top/button-top.component';
 
 
 @NgModule({
-  declarations: [AppComponent, MenuComponent, CarouselComponent, InfoComponent, ServicesComponentComponent],
+  declarations: [AppComponent, MenuComponent, CarouselComponent, InfoComponent, ServicesComponentComponent, RegisterComponent, FooterComponent, ButtonTopComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
