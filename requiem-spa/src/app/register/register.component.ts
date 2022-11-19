@@ -15,7 +15,11 @@ export class RegisterComponent implements OnInit {
   });
 
   message: string = '';
-  res!: boolean;
+  success!: boolean;
+
+  //Barra de progresso
+  value: number = 0;
+  showProgress: boolean = false;
 
   constructor(
     private fb: FormBuilder,
@@ -25,23 +29,41 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {}
 
   addUser() {
-    console.log(this.emailForm.value);
+    //Barra de progresso
+    this.randomProgress();
+    this.showProgress = true;
+
+    //Chamada do serviço
     this.registerService.newUser(this.emailForm.value).subscribe({
       error: (err) => {
-        this.setTimeOut(false);
-        this.message = err.error;
+        this.showProgress = false;
+        if (err?.status == 400) {
+          this.setTimeOut(false);
+          this.message = err.error;
+        } else {
+          this.setTimeOut(false);
+          this.message = 'Ops! Algo deu errado, tente novamente';
+        }
       },
       next: (res) => {
+        this.showProgress = false;
         this.setTimeOut(true);
         this.message = 'E-mail cadastrado com sucesso!';
       },
     });
   }
 
+  //Controla exibição da div de status
   setTimeOut(res: boolean) {
+    this.success = res;
+    setTimeout(() => (this.success = undefined), 3000);
+  }
+
+  //Controla exibição da barra de progresso
+  randomProgress() {
+    console.log(this.value);
     setTimeout(() => {
-      this.res = res;
-    }, 2000);
-    this.res = null;
+      while (this.value <= 80) this.value += 10;
+    }, 200);
   }
 }

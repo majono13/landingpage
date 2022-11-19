@@ -18,28 +18,28 @@ namespace Api.Services
             _mapper = mapper;
         }
 
-        public  Result IsValidEmail(UserModel user)
+        public Result IsValidEmail(UserModel user)
         {
 
             try
             {
                 //E-mail vazio
-                if (string.IsNullOrEmpty(user.Email)) return Result.Fail("E-mail não informado.").WithError("E-mail não informado");
+                if (string.IsNullOrEmpty(user.Email)) return Result.Fail("E-mail não informado.");
 
                 //E-mail já cadastrado
                 UserModel _user = _userContext.Users.FirstOrDefault(u => u.Email == user.Email);
                 if (_user != null) return Result.Fail("E-mail já cadastrado.");
 
                 //E-mail inválido
-                if (!Regex.IsMatch(user.Email, @"\w+[@]\w+[.]com")) return Result.Fail(new Error("E-mail inválido."));
+                if (!Regex.IsMatch(user.Email, @"\w+[@]\w+[.]")) return Result.Fail(new Error("E-mail inválido."));
 
                 return Result.Ok();
             }
             catch
             {
-                return Result.Fail("Erro interno");
+                return null;
             }
-        
+
         }
 
         public Result newUser(UserDto u)
@@ -50,19 +50,22 @@ namespace Api.Services
 
             try
             {
-                if (res.IsFailed)
+                if (res != null)
                 {
-                    return Result.Fail(res.Errors);
+
+                    if (res.IsFailed) return Result.Fail(res.Errors);
+
+                    _userContext.Add(user);
+                    _userContext.SaveChanges();
+
+                    if (res != null) return Result.Ok();
                 }
 
-                _userContext.Add(user);
-                _userContext.SaveChanges();
-
-                return Result.Ok();
+                return null;
             }
             catch
             {
-                return Result.Fail("Erro interno");
+                return null;
             }
         }
     }

@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { AlertModule } from 'ngx-bootstrap/alert';
+import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
 
 //Componentes
 import { MenuComponent } from './menu/menu.component';
@@ -43,6 +44,7 @@ import { ButtonTopComponent } from './button-top/button-top.component';
     ReactiveFormsModule,
     HttpClientModule,
     AlertModule.forRoot(),
+    ProgressbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

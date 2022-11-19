@@ -24,8 +24,13 @@ namespace Api.Controllers
         {
            Result res = _userService.newUser(user);
 
-            if (res.IsFailed) return StatusCode(500, res.Reasons[0].Message);
-            return Ok();
+            if(res != null)
+            {
+                if (res.IsSuccess) return Ok();
+
+                if (res.IsFailed) return StatusCode(400, res.Reasons[0].Message);
+            }
+            return StatusCode(500);
         }
     }
 }

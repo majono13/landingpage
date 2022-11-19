@@ -13,9 +13,16 @@
         E-mail inválido
       </div>
 
-      <div *ngIf="res !==null" [ngClass]="res ? 'success' : 'erro' ">
-      {{message}}
-    </div>
+      <div *ngIf="success !==undefined" [ngClass]="success ? 'success' : 'erro'
+        ">
+        {{message}}
+      </div>
+      <progressbar
+        *ngIf="showProgress" [value]="value" [animate]="true" [striped]="true"
+        class="progress-striped active" type="success">
+        <span class="text-nowrap"></span>
+      </progressbar>
+
       <button [disabled]="emailForm.invalid" (click)="addUser()" class="btn">Enviar!</button>
     </form>
   </section>
