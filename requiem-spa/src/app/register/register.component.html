@@ -1,13 +1,22 @@
 <div class="content">
-    <section>
-        <h1>
-            <i class="bi bi-gift-fill"></i>
-            Inscreva-se para ganhar descontos!
-        </h1>
-        <div class="input">
-            <input type="email">
-        </div>
+  <section>
+    <h1>
+      <i class="bi bi-gift-fill"></i>
+      Inscreva-se para ganhar descontos!
+    </h1>
+    <form [formGroup]="emailForm">
+      <div class="input">
+        <input placeholder="Digite seu email" formControlName="email">
+      </div>
+      <div *ngIf="emailForm.controls['email'].errors &&
+        emailForm.controls['email'].touched" class="erro">
+        E-mail inválido
+      </div>
 
-        <button class="btn">Enviar!</button>
-    </section>
+      <div *ngIf="res !==null" [ngClass]="res ? 'success' : 'erro' ">
+      {{message}}
+    </div>
+      <button [disabled]="emailForm.invalid" (click)="addUser()" class="btn">Enviar!</button>
+    </form>
+  </section>
 </div>

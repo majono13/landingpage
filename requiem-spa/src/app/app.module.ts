@@ -5,9 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+//Modulos Angyular
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 //NGX BOOTSTRAP
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { AlertModule } from 'ngx-bootstrap/alert';
 
 //Componentes
 import { MenuComponent } from './menu/menu.component';
@@ -18,15 +23,26 @@ import { RegisterComponent } from './register/register.component';
 import { FooterComponent } from './footer/footer.component';
 import { ButtonTopComponent } from './button-top/button-top.component';
 
-
 @NgModule({
-  declarations: [AppComponent, MenuComponent, CarouselComponent, InfoComponent, ServicesComponentComponent, RegisterComponent, FooterComponent, ButtonTopComponent],
+  declarations: [
+    AppComponent,
+    MenuComponent,
+    CarouselComponent,
+    InfoComponent,
+    ServicesComponentComponent,
+    RegisterComponent,
+    FooterComponent,
+    ButtonTopComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     CarouselModule.forRoot(),
     CollapseModule.forRoot(),
+    ReactiveFormsModule,
+    HttpClientModule,
+    AlertModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],

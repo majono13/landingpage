@@ -29,6 +29,21 @@
   }
 }
 
+.erro, .success {
+ width: 100%;
+ text-align: center;
+ margin: auto;
+ padding: 10px;
+}
+
+.success {
+  color: var(--tertiary-color)
+}
+
+.erro {
+  color: red;
+ }
+
 h1 {
   margin-bottom: 15px;
   font-size: 1.5em;
