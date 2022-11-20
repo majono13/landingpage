@@ -1,27 +1,49 @@
-# Front
+# Requiem Spa
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
+### Projeto pessoal pem formato de Landing Page.
 
-## Development server
+Landing page com campo para cadastro de clientes via e-mail.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+![Início da página](https://firebasestorage.googleapis.com/v0/b/tec-school-3918e.appspot.com/o/imgs-github%2FWhatsApp%20Image%202022-11-20%20at%2019.01.06.jpeg?alt=media&token=96f92081-f3c6-41ec-bb2c-ec1ca1ad836a)
 
-## Code scaffolding
+## Funcionalidades
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Responsividade
 
-## Build
+1 - O website é responsivo, se adaptando para o uso em diferentes tamanhos de tela:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Mobile
 
-## Running unit tests
+![Página versão mobile](https://firebasestorage.googleapis.com/v0/b/tec-school-3918e.appspot.com/o/imgs-github%2FWhatsApp%20Image%202022-11-20%20at%2019.02.36.jpeg?alt=media&token=22813b55-095c-4c01-a0a1-97a3b4d627c1)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Desktop
 
-## Running end-to-end tests
+![Página versão desktop](https://firebasestorage.googleapis.com/v0/b/tec-school-3918e.appspot.com/o/imgs-github%2FWhatsApp%20Image%202022-11-20%20at%2019.07.44.jpeg?alt=media&token=166b6840-7dbe-4848-b7f3-a8c15610b8ae)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+2 - Campo de cadastro:
 
-## Further help
+- O cliente pode se cadastrar para receber desconto e notificações de novidades.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![Campo para cadastro](https://firebasestorage.googleapis.com/v0/b/tec-school-3918e.appspot.com/o/imgs-github%2FWhatsApp%20Image%202022-11-20%20at%2019.03.14.jpeg?alt=media&token=4329300a-6886-45d7-8be5-9ee992083ac1)
+
+<h3>✅ Tecnologias Utilizadas</h3>
+
+➡️ Angular 13;
+
+➡️ Bootstrap;
+
+➡️ Typescript;
+
+➡️ HTML 5;
+
+➡️ CSS 3;
+
+➡️ .Net Core;
+
+➡️ C#;
+
+<h3>💡 Melhorias a serem implementadas: </h3>
+
+➡️ Envio de e-mail de confirmação para validação do e-mail cadastrado;
+
+➡️ Acesso a lista de e-mails cadastrados;
